@@ -45,11 +45,11 @@ module.exports = {
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' }),
-      },      
+      },
       {
         test: /\.less$/,
         loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!less-loader' })
-      }, 
+      },
       {
         test: /\.js$/,
         loader: 'babel-loader',
