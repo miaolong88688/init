@@ -81,11 +81,11 @@ prodConfig = merge(baseConfig, {
       }
     }),
     // new CompressionPlugin({ // gzip
-    //         asset: "[path].gz[query]",
-    //         algorithm: "gzip",
-    //         test: /\.js$|\.css$|\.html$/,
-    //         threshold: 10240,
-    //         minRatio: 0
+    //   asset: '[path].gz[query]',
+    //   algorithm: 'gzip',
+    //   test: /\.js$|\.css$|\.html$/,
+    //   threshold: 10240,
+    //   minRatio: 0
     // }),
     // 根据已有的html文件生成html文件
     new HtmlwebpackPlugin({ // 打包输出HTML
@@ -109,7 +109,7 @@ prodConfig = merge(baseConfig, {
       'process.env': {
         NODE_ENV: '"production"'
       },
-      __DEV__: JSON.stringify(process.env.NODE_ENV)
+      'process.__DEV__': JSON.stringify(process.env.NODE_ENV)
     }),
     new ParallelUglifyPlugin({ // 多线程运行uglifyjs插件
       cacheDir: '.cache/',
